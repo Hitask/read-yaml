@@ -1,4 +1,7 @@
-on: [ push, pull_request ]
+on: 
+  pull_request:
+    types: [ opened, reopened, synchronize, ready_for_review ]
+    branches: [ main, master ]
 
 jobs:
   test-yaml-reader:
