@@ -16,7 +16,7 @@ const run = async () => {
             return
         }
 
-        let output = keys.reduce((dict, key) => dict[key], yamlData)
+        let output = keys.reduce((dict, key) => dict[key as keyof typeof dict], yamlData)
         core.setOutput('data', output)
     } catch (error) {
         core.setFailed((error as Error).message)
