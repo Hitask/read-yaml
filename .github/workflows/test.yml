@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test read-yaml
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3.1.0
 
       - name: Run read-yaml action
         id: using
